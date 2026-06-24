@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Book Hub - Search, Read & Download</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold text-dark"><i class="fas fa-book-open text-primary me-2"></i>E-Book Library</h1>
+            <p class="text-muted">Discover, download, and read your favorite PDF documents instantly.</p>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+                <div class="input-group input-group-lg shadow-sm rounded">
+                    <span class="input-group-text bg-white border-end-0 text-muted">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="bookSearch" class="form-control border-start-0 ps-0" placeholder="Search by book title, author, or keywords...">
+                    <button class="btn btn-primary px-4" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
+            <button class="btn btn-sm btn-outline-secondary active-filter rounded-pill px-3">All Genres</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Technology</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Fiction</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Academic</button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Self-Help</button>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="booksGrid">
+            
+            <div class="col book-card-item" data-title="Python Programming Mastery">
+                <div class="card h-100 shadow-sm border-0 transition-card">
+                    <div class="row g-0 h-100">
+                        <div class="col-4 bg-dark d-flex align-items-center justify-content-center border-radius-start text-light text-center p-2 position-relative">
+                            <div>
+                                <i class="fas fa-file-pdf fa-3x text-danger mb-2"></i>
+                                <div class="small fw-bold text-uppercase tracking-wider">Python</div>
+                            </div>
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-2">New</span>
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title fw-bold text-dark mb-1">Python Programming Mastery</h5>
+                                <p class="card-text text-muted small mb-2">By John Doe</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-light text-dark border">Tech</span>
+                                    <span class="badge bg-light text-dark border">4.5 MB</span>
+                                </div>
+                                <div class="mt-auto d-flex gap-2">
+                                    <button class="btn btn-sm btn-outline-primary flex-grow-1 view-btn" data-pdf="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" data-title="Python Programming Mastery">
+                                        <i class="fas fa-eye me-1"></i> Read
+                                    </button>
+                                    <button class="btn btn-sm btn-primary download-btn" data-filename="Python_Mastery.pdf">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col book-card-item" data-title="The Art of Artificial Intelligence">
+                <div class="card h-100 shadow-sm border-0 transition-card">
+                    <div class="row g-0 h-100">
+                        <div class="col-4 bg-secondary d-flex align-items-center justify-content-center border-radius-start text-light text-center p-2">
+                            <div>
+                                <i class="fas fa-file-pdf fa-3x text-warning mb-2"></i>
+                                <div class="small fw-bold text-uppercase tracking-wider">AI Core</div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title fw-bold text-dark mb-1">The Art of Artificial Intelligence</h5>
+                                <p class="card-text text-muted small mb-2">By Dr. Alan Turing</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-light text-dark border">Science</span>
+                                    <span class="badge bg-light text-dark border">12.1 MB</span>
+                                </div>
+                                <div class="mt-auto d-flex gap-2">
+                                    <button class="btn btn-sm btn-outline-primary flex-grow-1 view-btn" data-pdf="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" data-title="The Art of Artificial Intelligence">
+                                        <i class="fas fa-eye me-1"></i> Read
+                                    </button>
+                                    <button class="btn btn-sm btn-primary download-btn" data-filename="AI_Art.pdf">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col book-card-item" data-title="Building Web Applications with Bootstrap">
+                <div class="card h-100 shadow-sm border-0 transition-card">
+                    <div class="row g-0 h-100">
+                        <div class="col-4 bg-info d-flex align-items-center justify-content-center border-radius-start text-white text-center p-2">
+                            <div>
+                                <i class="fas fa-file-pdf fa-3x text-white mb-2"></i>
+                                <div class="small fw-bold text-uppercase tracking-wider">Web UI</div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body d-flex flex-column h-100">
+                                <h5 class="card-title fw-bold text-dark mb-1">Building Web Applications with Bootstrap</h5>
+                                <p class="card-text text-muted small mb-2">By Jane Smith</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-light text-dark border">Design</span>
+                                    <span class="badge bg-light text-dark border">3.2 MB</span>
+                                </div>
+                                <div class="mt-auto d-flex gap-2">
+                                    <button class="btn btn-sm btn-outline-primary flex-grow-1 view-btn" data-pdf="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" data-title="Building Web Applications with Bootstrap">
+                                        <i class="fas fa-eye me-1"></i> Read
+                                    </button>
+                                    <button class="btn btn-sm btn-primary download-btn" data-filename="Bootstrap_Apps.pdf">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1060">
+        <div id="downloadToast" class="toast align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+            <div class="toast-body">
+                <div class="d-flex justify-content-between mb-1">
+                    <span id="downloadFileName" class="fw-bold small">Downloading file...</span>
+                    <span id="downloadPercent" class="small">0%</span>
+                </div>
+                <div class="progress progress-xs" style="height: 6px;">
+                    <div id="downloadProgressBar" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="pdfReaderModal" tabindex="-1" aria-labelledby="pdfReaderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white py-2">
+                    <h5 class="modal-title h6" id="pdfReaderModalLabel"><i class="fas fa-book-open me-2 text-primary"></i> Document Viewer</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-secondary">
+                    <iframe id="pdfFrame" src="" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="ebook.js"></script>
+</body>
+</html>

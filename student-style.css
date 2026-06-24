@@ -1,0 +1,38 @@
+/* Sidebar item grouping configurations */
+.active-student {
+    background-color: #f0f4f8 !important;
+    border-left: 4px solid #0d6efd !important;
+    color: #0d6efd !important;
+}
+
+.student-profile-banner {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 12px;
+}
+
+/* Tab Layout Overrides */
+.nav-pills .nav-link {
+    color: #475569;
+    background-color: #fff;
+    border: 1px solid #cbd5e1;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #0d6efd !important;
+    color: #fff !important;
+    border-color: #0d6efd !important;
+}
+
+/* Custom Scrollbar mechanics for beautiful data lists */
+.style-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.style-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+.style-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>பணம் செலுத்தும் பகுதி (Payment Gateway)</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="payment-style.css">
+</head>
+<body class="bg-light">
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow border-0 rounded-3">
+                <div class="card-header bg-dark text-white text-center py-3">
+                    <h4 class="mb-0 fw-bold"><i class="fas fa-shield-alt text-success me-2"></i>பாதுகாப்பான கட்டண முறை</h4>
+                </div>
+                <div class="card-body p-4">
+                    
+                    <!-- PAYMENT METHOD SELECTION (விருப்பத் தேர்வுகள்) -->
+                    <label class="form-label fw-bold text-secondary mb-3">கட்டண முறையைத் தேர்ந்தெடுக்கவும்:</label>
+                    <div class="row g-2 mb-4">
+                        <!-- Card -->
+                        <div class="col-6 col-sm-3">
+                            <input type="radio" class="btn-check" name="paymentMethod" id="methodCard" checked autocomplete="off">
+                            <label class="btn btn-outline-primary w-100 py-3 d-flex flex-column align-items-center justify-content-center h-100" for="methodCard">
+                                <i class="fas fa-credit-card fa-2x mb-2"></i>
+                                <span class="small fw-bold">அட்டை (Card)</span>
+                            </label>
+                        </div>
+                        <!-- PayPal -->
+                        <div class="col-6 col-sm-3">
+                            <input type="radio" class="btn-check" name="paymentMethod" id="methodPaypal" autocomplete="off">
+                            <label class="btn btn-outline-primary w-100 py-3 d-flex flex-column align-items-center justify-content-center h-100" for="methodPaypal">
+                                <i class="fab fa-paypal fa-2x mb-2"></i>
+                                <span class="small fw-bold">PayPal</span>
+                            </label>
+                        </div>
+                        <!-- Peoples Pay -->
+                        <div class="col-6 col-sm-3">
+                            <input type="radio" class="btn-check" name="paymentMethod" id="methodPeoplesPay" autocomplete="off">
+                            <label class="btn btn-outline-primary w-100 py-3 d-flex flex-column align-items-center justify-content-center h-100" for="methodPeoplesPay">
+                                <i class="fas fa-university fa-2x mb-2"></i>
+                                <span class="small fw-bold">Peoples Pay</span>
+                            </label>
+                        </div>
+                        <!-- eZcash / ezcase -->
+                        <div class="col-6 col-sm-3">
+                            <input type="radio" class="btn-check" name="paymentMethod" id="methodEzcash" autocomplete="off">
+                            <label class="btn btn-outline-primary w-100 py-3 d-flex flex-column align-items-center justify-content-center h-100" for="methodEzcash">
+                                <i class="fas fa-mobile-alt fa-2x mb-2"></i>
+                                <span class="small fw-bold">eZcash</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <hr class="text-muted my-4">
+
+                    <!-- DYNAMIC PAYMENT FORMS (மாறும் படிவங்கள்) -->
+                    <form id="paymentForm">
+                        
+                        <!-- 1. DEBIT/CREDIT CARD FORM -->
+                        <div id="cardFormSection" class="payment-section">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">அட்டைதாரர் பெயர் (Cardholder Name)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fas fa-user text-muted"></i></span>
+                                    <input type="text" class="form-control" placeholder="John Doe" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">அட்டை எண் (Card Number)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fas fa-credit-card text-muted"></i></span>
+                                    <input type="text" class="form-control" placeholder="1234 5678 9101 1121" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label class="form-label small fw-bold text-secondary">காலாவதியாகும் தேதி (MM/YY)</label>
+                                    <input type="text" class="form-control" placeholder="12/28" required>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label class="form-label small fw-bold text-secondary">CVC / CVV</label>
+                                    <input type="password" class="form-control" placeholder="***" maxlength="3" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. PAYPAL MESSAGE -->
+                        <div id="paypalSection" class="payment-section d-none text-center py-3">
+                            <i class="fab fa-paypal fa-3x text-primary mb-3"></i>
+                            <p class="text-muted">"Pay Now" என்பதை அழுத்திய பின், பாதுகாப்பாக பணம் செலுத்த நீங்கள் PayPal பக்கத்திற்கு அழைத்துச் செல்லப்படுவீர்கள்.</p>
+                        </div>
+
+                        <!-- 3. PEOPLES PAY FORM -->
+                        <div id="peoplesPaySection" class="payment-section d-none">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">Peoples Pay பயனர் பெயர் / ID</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><i class="fas fa-id-card text-muted"></i></span>
+                                    <input type="text" class="form-control" placeholder="PP-12345">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">பதிவு செய்யப்பட்ட தொலைபேசி எண்</label>
+                                <input type="tel" class="form-control" placeholder="07XXXXXXXX">
+                            </div>
+                        </div>
+
+                        <!-- 4. EZCASH FORM -->
+                        <div id="ezcashSection" class="payment-section d-none">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">eZcash மொபைல் எண்</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white"><span class="fw-bold text-muted" style="font-size: 0.85rem;">+94</span></span>
+                                    <input type="tel" class="form-control" placeholder="7XXXXXXXX">
+                                </div>
+                                <div class="form-text text-muted" style="font-size: 0.75rem;">உங்கள் மொபைலுக்கு வரும் OTP குறியீட்டை உள்ளிட்டு உறுதிப்படுத்தவும்.</div>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT BUTTON -->
+                        <button type="submit" class="btn btn-dark w-100 btn-lg py-3 mt-3 fw-bold rounded-3 transition-btn">
+                            <i class="fas fa-lock me-2 text-warning"></i>பாதுகாப்பாக செலுத்தவும்
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="payment-script.js"></script>
+</body>
+</html>
