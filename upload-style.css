@@ -1,0 +1,75 @@
+/* --- CSS ANIMATIONS --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.delay-1 {
+    animation-delay: 0.15s;
+    opacity: 0;
+}
+
+.animate-bounce {
+    animation: bounceSlow 2s infinite ease-in-out;
+}
+
+/* --- STRUCTURE AND UI STYLING --- */
+.rounded-4 { border-radius: 1rem !important; }
+.cursor-pointer { cursor: pointer; }
+
+/* Main layout setup configuration background details */
+.dropzone-container {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+    min-height: 380px;
+    transition: all 0.3s ease;
+}
+
+/* Drag-over hover visual feedback class injected via Javascript */
+.dropzone-container.drag-over {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    transform: scale(0.98);
+}
+
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form element custom interaction styles */
+.form-control, .form-select {
+    border: 1px solid #e2e8f0;
+    padding: 0.65rem 0.75rem;
+    transition: all 0.2s ease;
+}
+.form-control:focus, .form-select:focus {
+    background-color: #fff !important;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.transition-btn {
+    transition: all 0.2s ease-in-out;
+}
+.transition-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}

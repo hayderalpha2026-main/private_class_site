@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-3">
+        <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-dark me-2" id="sidebarToggle" type="button">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                <a class="navbar-brand fw-bold" href="#">EduDash</a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-light position-relative">
+                    <i class="fas fa-bell fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 0.6rem;">
+                        3
+                    </span>
+                </a>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-light text-decoration-none dropdown-toggle"
+                        id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=32&h=32&q=80"
+                            alt="mdo" width="32" height="32" class="rounded-circle me-2">
+                        <span class="d-none d-sm-inline">Admin</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="dropdownUser">
+                        <li><a class="dropdown-menu-item dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-menu-item dropdown-item" href="#">Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-menu-item dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar bg-light border-end" id="sidebar">
+        <div class="p-3 dynamic-links">
+            <ul class="nav nav-pills flex-column mb-auto gap-1">
+                <li class="nav-item">
+                    <a href="/" class="nav-link text-dark" aria-current="page">
+                        <i class="fas fa-house me-3 width-fixed"></i><span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="students.html" class="nav-link text-dark">
+                        <i class="fas fa-user-graduate me-3 width-fixed"></i><span>Student</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ebooks.html" class="nav-link text-dark">
+                        <i class="fas fa-book me-3 width-fixed"></i><span>E-Books</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="payment.html" class="nav-link text-dark">
+                        <i class="fas fa-credit-card me-3 width-fixed"></i><span>Payment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="nav-link active">
+                        <i class="fas fa-info-circle me-3 width-fixed"></i><span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link text-dark">
+                        <i class="fas fa-envelope me-3 width-fixed"></i><span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main class="main-content" id="mainContent">
+        <!-- 1. HERO SECTION -->
+        <section class="about-hero text-white text-center d-flex align-items-center position-relative overflow-hidden">
+            <div class="container position-relative z-index-2">
+                <span class="badge bg-primary px-3 py-2 rounded-pill fw-semibold text-uppercase tracking-wider mb-3">Who
+                    We Are</span>
+                <h1 class="display-3 fw-bold mb-3">Empowering Growth through Innovation</h1>
+                <p class="lead mx-auto text-light opacity-75" style="max-width: 650px;">We specialize in designing
+                    exceptional digital environments that streamline learning workflows, maximize human capabilities,
+                    and foster collaborative education.</p>
+            </div>
+            <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+        </section>
+
+        <!-- 2. STORY & MISSION SECTION -->
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="text-primary fw-bold text-uppercase tracking-wider d-block mb-2">Our Story</span>
+                        <h2 class="fw-bold text-dark display-6 mb-4">Bridging the Gap Between Ambition and Execution
+                        </h2>
+                        <p class="text-secondary mb-3">Founded with a unified perspective, our platform handles standard
+                            logistical complexities seamlessly so administrators and students can focus entirely on
+                            impactful, structured modern skill development.</p>
+                        <p class="text-secondary mb-4">We are committed to delivering iterative structural upgrades
+                            across code ecosystems, serving as an accessible backbone for progressive educational
+                            institutions worldwide.</p>
+
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fas fa-check-circle text-success fs-5"></i>
+                                    <span class="fw-semibold text-dark">Flexible Architectures</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fas fa-check-circle text-success fs-5"></i>
+                                    <span class="fw-semibold text-dark">Global Standards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&h=450&q=80"
+                                alt="Team collaborating" class="img-fluid rounded-4 shadow">
+                            <div class="position-absolute bottom-0 start-0 bg-primary text-white p-4 rounded-4 shadow m-3 d-none d-sm-block"
+                                style="max-width: 220px;">
+                                <h3 class="fw-bold mb-0">100%</h3>
+                                <p class="small mb-0 opacity-75">Committed to User Success and Open Source</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. COUNTER / STATS BANNER -->
+        <section class="py-5 stats-banner text-white">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-6 col-md-3">
+                        <i class="fas fa-user-graduate fa-2x text-warning mb-2"></i>
+                        <h2 class="fw-bold mb-0 text-white">15K+</h2>
+                        <p class="small mb-0 opacity-75">Active Students</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <i class="fas fa-book fa-2x text-warning mb-2"></i>
+                        <h2 class="fw-bold mb-0 text-white">1,200+</h2>
+                        <p class="small mb-0 opacity-75">E-Books Hosted</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <i class="fas fa-globe fa-2x text-warning mb-2"></i>
+                        <h2 class="fw-bold mb-0 text-white">45+</h2>
+                        <p class="small mb-0 opacity-75">Partner Institutions</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <i class="fas fa-award fa-2x text-warning mb-2"></i>
+                        <h2 class="fw-bold mb-0 text-white">99.8%</h2>
+                        <p class="small mb-0 opacity-75">Uptime SLA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CORE VALUES SECTION -->
+        <section class="py-5 bg-light">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-dark">The Pillars of Our Success</h2>
+                    <p class="text-muted mx-auto" style="max-width: 500px;">The foundational philosophies driving our
+                        roadmap decisions every single day.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 p-4 shadow-sm value-card transition-card rounded-4">
+                            <div
+                                class="bg-primary-subtle text-primary rounded-3 p-3 d-inline-block mb-3 align-self-start">
+                                <i class="fas fa-lightbulb fa-xl"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">Innovation First</h5>
+                            <p class="text-secondary small mb-0">We build future-proof tools utilizing scalable
+                                front-end and back-end logic, rejecting stagnant methodologies.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 p-4 shadow-sm value-card transition-card rounded-4">
+                            <div
+                                class="bg-success-subtle text-success rounded-3 p-3 d-inline-block mb-3 align-self-start">
+                                <i class="fas fa-user-shield fa-xl"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">Absolute Security</h5>
+                            <p class="text-secondary small mb-0">Data isolation protocols, robust authorization checks,
+                                and safe token handling are integrated from day one.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 p-4 shadow-sm value-card transition-card rounded-4">
+                            <div class="bg-info-subtle text-info rounded-3 p-3 d-inline-block mb-3 align-self-start">
+                                <i class="fas fa-users fa-xl"></i>
+                            </div>
+                            <h5 class="fw-bold text-dark mb-2">Inclusivity Always</h5>
+                            <p class="text-secondary small mb-0">Our tools prioritize responsive design scales, enabling
+                                flawless performance across phones, tablets, and devices anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. LEADER TEAM MATRIX -->
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <span class="text-primary fw-bold text-uppercase tracking-wider d-block mb-2">Leadership Team</span>
+                    <h2 class="fw-bold text-dark">Meet the Minds Driving Evolution</h2>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Member 1 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="text-center team-wrapper">
+                            <div class="overflow-hidden rounded-4 mb-3 shadow-sm position-relative team-img-box">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=350&q=80"
+                                    class="img-fluid w-100 transition-scale" alt="Executive">
+                                <div class="team-social-overlay d-flex align-items-center justify-content-center gap-2">
+                                    <a href="#" class="btn btn-light btn-sm rounded-circle"><i
+                                            class="fab fa-linkedin-in text-primary"></i></a>
+                                    <a href="#" class="btn btn-light btn-sm rounded-circle"><i
+                                            class="fab fa-twitter text-info"></i></a>
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-dark mb-0">Sarah Jenkins</h6>
+                            <span class="text-muted small">Chief Operations Officer</span>
+                        </div>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="text-center team-wrapper">
+                            <div class="overflow-hidden rounded-4 mb-3 shadow-sm position-relative team-img-box">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&h=350&q=80"
+                                    class="img-fluid w-100 transition-scale" alt="Executive">
+                                <div class="team-social-overlay d-flex align-items-center justify-content-center gap-2">
+                                    <a href="#" class="btn btn-light btn-sm rounded-circle"><i
+                                            class="fab fa-linkedin-in text-primary"></i></a>
+                                    <a href="#" class="btn btn-light btn-sm rounded-circle"><i
+                                            class="fab fa-github text-dark"></i></a>
+                                </div>
+                            </div>
+                            <h6 class="fw-bold text-dark mb-0">Marcus Vance</h6>
+                            <span class="text-muted small">Lead Solution Architect</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

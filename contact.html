@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact-style.css">
+</head>
+
+<body class="bg-light">
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-3">
+        <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-dark me-2" id="sidebarToggle" type="button">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                <a class="navbar-brand fw-bold" href="#">EduDash</a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-light position-relative">
+                    <i class="fas fa-bell fa-lg"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 0.6rem;">
+                        3
+                    </span>
+                </a>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-light text-decoration-none dropdown-toggle"
+                        id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=32&h=32&q=80"
+                            alt="mdo" width="32" height="32" class="rounded-circle me-2">
+                        <span class="d-none d-sm-inline">Admin</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="dropdownUser">
+                        <li><a class="dropdown-menu-item dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-menu-item dropdown-item" href="#">Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-menu-item dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar bg-light border-end" id="sidebar">
+        <div class="p-3 dynamic-links">
+            <ul class="nav nav-pills flex-column mb-auto gap-1">
+                <li class="nav-item">
+                    <a href="/" class="nav-link text-dark" aria-current="page">
+                        <i class="fas fa-house me-3 width-fixed"></i><span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="students.html" class="nav-link text-dark">
+                        <i class="fas fa-user-graduate me-3 width-fixed"></i><span>Student</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ebooks.html" class="nav-link text-dark">
+                        <i class="fas fa-book me-3 width-fixed"></i><span>E-Books</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="payment.html" class="nav-link text-dark">
+                        <i class="fas fa-credit-card me-3 width-fixed"></i><span>Payment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="nav-link text-dark">
+                        <i class="fas fa-info-circle me-3 width-fixed"></i><span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link active">
+                        <i class="fas fa-envelope me-3 width-fixed"></i><span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <main class="main-content" id="mainContent">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span
+                    class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold text-uppercase tracking-wider mb-2">Get
+                    In Touch</span>
+                <h1 class="fw-bold text-dark display-5">We're Here to Help</h1>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Have questions? Whether you are a student
+                    looking for guidance or an administrator handling operations, select your channel below.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-7">
+                    <div class="card shadow-sm border-0 h-100 rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="fw-bold text-dark mb-1"><i
+                                    class="fas fa-user-graduate text-primary me-2"></i>Student & User Support</h3>
+                            <p class="text-muted small mb-4">Submit a ticket and our academic support team will get back
+                                to you within 24 hours.</p>
+
+                            <form id="studentContactForm" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold text-secondary">Full Name</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light border-end-0"><i
+                                                    class="fas fa-user text-muted"></i></span>
+                                            <input type="text" class="form-control bg-light border-start-0"
+                                                placeholder="Alex Morgan" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label small fw-bold text-secondary">Student ID /
+                                            Username</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light border-end-0"><i
+                                                    class="fas fa-id-badge text-muted"></i></span>
+                                            <input type="text" class="form-control bg-light border-start-0"
+                                                placeholder="STU-10293">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label small fw-bold text-secondary">Email Address</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light border-end-0"><i
+                                                    class="fas fa-envelope text-muted"></i></span>
+                                            <input type="email" class="form-control bg-light border-start-0"
+                                                placeholder="alex@school.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label small fw-bold text-secondary">Inquiry Type</label>
+                                        <select class="form-select bg-light" required>
+                                            <option value="" selected disabled>Choose a category...</option>
+                                            <option value="academic">Course & E-Books Inquiry</option>
+                                            <option value="finance">Tuition Fees & Payments</option>
+                                            <option value="technical">Account Login & Tech Issues</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label small fw-bold text-secondary">Your Message</label>
+                                        <textarea class="form-control bg-light" rows="5"
+                                            placeholder="Describe your issue or query in detail..." required></textarea>
+                                    </div>
+                                    <div class="col-md-12 pt-2">
+                                        <button type="submit"
+                                            class="btn btn-primary w-100 py-3 fw-bold rounded-3 transition-btn">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card shadow-sm border-0 text-white rounded-4 mb-4 admin-gradient-card">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="fw-bold mb-2"><i class="fas fa-user-shield text-warning me-2"></i>Admin Hotline
+                            </h3>
+                            <p class="opacity-75 small mb-4">Dedicated urgent support channel for system managers,
+                                registrars, and campus staff personnel.</p>
+
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <div class="bg-white bg-opacity-10 p-2 rounded-3 text-warning">
+                                    <i class="fas fa-headset fa-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="d-block text-uppercase opacity-50 small fw-bold">Internal
+                                        Helpdesk</span>
+                                    <span class="fs-5 fw-semibold">+1 (555) 901-4422</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-white bg-opacity-10 p-2 rounded-3 text-warning">
+                                    <i class="fas fa-laptop-code fa-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="d-block text-uppercase opacity-50 small fw-bold">SysAdmin Emergency
+                                        Email</span>
+                                    <span class="fs-6 fw-semibold text-break">sys-ops@eduplatform.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-dark mb-3">Campus Headquarters</h5>
+
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <i class="fas fa-location-dot text-danger mt-1"></i>
+                                <div>
+                                    <p class="mb-0 text-secondary small">102 University Avenue, Block C,<br>Suite 400,
+                                        New York, NY 10001</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <i class="fas fa-clock text-success mt-1"></i>
+                                <div>
+                                    <p class="mb-0 text-secondary small fw-bold">Mon - Fri: 8:00 AM - 5:00 PM</p>
+                                    <span class="text-muted xsmall" style="font-size: 0.75rem;">Closed on Weekends and
+                                        Public Holidays</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="ratio ratio-21x9 bg-light border rounded-3 overflow-hidden mt-3 d-flex align-items-center justify-content-center text-muted">
+                                <div class="text-center">
+                                    <i class="fas fa-map-marked-alt fa-2x mb-1 text-secondary"></i>
+                                    <span class="d-block xsmall" style="font-size: 0.75rem;">Interactive Map Location
+                                        View</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="contact-script.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
